@@ -110,7 +110,7 @@ button {
   margin-top: auto;
   padding: 1rem 2.5rem;
   background: #F2C94C;
-  color: #f5f5f5;
+  color: black;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 600;
@@ -126,6 +126,7 @@ button {
   transform: scale(1.08);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
   background: #1F7A4D;
+  color: #F5F5F5;
 }
 
 
@@ -162,6 +163,7 @@ button {
     margin-bottom: 50px;
     text-align: left;
     width: 70vw;
+    line-height: 1.05em;
 }
 
 /* CARDS */
@@ -223,7 +225,8 @@ button {
     }
 
     #Stats h2 {
-        font-size: 1.3rem;
+        font-size: 4rem;
+        line-height: 1.05em;
     }
 }
 
@@ -238,6 +241,7 @@ button {
 #Stats div[id^="Card"]:hover {
     transform: scale(1.05);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    background-color: #F5F5F5;
 }
 
 
@@ -261,6 +265,7 @@ button {
     margin-bottom: 50px;
     text-align: left;
     width: 70vw;
+    line-height: 1.05em;
 }
 
 /* =========================
@@ -275,6 +280,7 @@ button {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 3rem;
+    line-height: 1.05em;
 }
 
 
@@ -302,10 +308,18 @@ button {
 
 #Citation p {
     font-weight: 400;  
-    font-size: clamp(1.5rem, 3vw, 3rem); /* taille flexible entre 1.5rem et 3rem selon largeur écran */
+    font-size: clamp(1.5rem, 3vw, 3rem); /* taille flexible */
     margin: 0;
     color: #686868;
+
+    transition: transform 0.8s ease; /* animation smooth */
+    transform-origin: left;           /* agrandit depuis le bord gauche */
 }
+
+#Citation p:hover {
+    transform: scale(1.05);           /* grossit légèrement */
+}
+
 
 /* Ajustement supplémentaire pour écrans très petits */
 @media (max-width: 480px) {
@@ -332,23 +346,21 @@ button {
 
 /* FORMULAIRE */
 #Formulaire {
-  margin: 5vw;
+  background: #ffffff;
+  padding: 5vw;
 }
 
 #Formulaire h2 {
   text-align: left;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   font-size: 4rem;
+  line-height: 1.05em;
 }
 
 #Formulaire form {
   width: 70vw;
   max-width: 900px;
   margin: 0 auto;
-  background: #ffffff;
-  padding: 3rem;
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 
   display: flex;
   flex-direction: column;
@@ -394,7 +406,7 @@ button {
   font-weight: 700;
   border-radius: 999px;
   background: #F2C94C;
-  color: white;
+  color: black;
   border: none;
   cursor: pointer;
 
@@ -408,6 +420,7 @@ button {
   transform: scale(1.05);
   box-shadow: 0 14px 30px rgba(31, 122, 77, 0.35);
   background: #1F7A4D;
+  color: #F5F5F5;
 }
 
 
@@ -468,3 +481,25 @@ footer {
     color: #1F7A4D;
     transform: translateY(-3px);
 }
+
+
+
+
+
+
+
+
+/*LINES BACKGROUND*/
+#LinesBackground {
+  background-color: #f5f5f5;
+  background-image: url("../medias/Closed-Lines.svg");
+  background-repeat: no-repeat;
+  background-position: center 10vh;
+  background-size: 100% auto; 
+  min-height: 100vh;     
+}
+
+/* Contenu dans la section */
+#LinesBackground .content {
+  padding: 50px 5vw;
+  color: black;}
