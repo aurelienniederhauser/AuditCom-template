@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="src/main.js" type="module" defer></script>
     <!--Open Graph-->
-    <meta property="og:title" content="Comment un club peut réussir sa transformation digitale">
+    <meta property="og:title" content="Landing page - Nextcom">
     <meta property="og:description"
         content="Un rapport complet sur les stratégies digitales des clubs romands, professionnelles et amateurs.">
-    <meta property="og:image" content="https://www.monsite.ch/images/preview.png">
-    <meta property="og:url" content="https://www.monsite.ch">
+    <meta property="og:image" content="https://aurelienniederhauser.github.io/AuditCom-template/medias/stade.webp">
+    <meta property="og:url" content="https://aurelienniederhauser.github.io/AuditCom-template/#Formulaire">
     <meta property="og:type" content="website">
 
 </head>
@@ -175,13 +175,15 @@
                     <input type="text" name="firstName" placeholder="Prénom">
                     <input type="email" name="email" placeholder="Email">
 
-                    <!-- Checkbox + label sur la même ligne -->
                     <div class="checkbox-group">
                         <input type="checkbox" name="newsletterAgreement" id="consent">
                         <label for="consent">J'accepte de recevoir la newsletter</label>
                     </div>
 
                     <button type="submit">Télécharger le rapport</button>
+
+                    <div id="messageContainer"></div>
+
                 </form>
             </section>
 
@@ -196,24 +198,11 @@
 
 
 
-            <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
-            <h1 data-bind-global="count"></h1>
-
-            <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
-            <section id="teamList">
-            </section>
-
-            <!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
-            <div id="messageContainer"></div>
-
-            <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
-            <form id="downloadForm">
-            </form>
-
+            
             <button id="backToTop" title="Remonter en haut">↑</button>
             <script>
                 const backToTopButton = document.getElementById('backToTop');
-
+                
                 // Affiche le bouton après avoir scrollé 300px
                 window.addEventListener('scroll', () => {
                     if (window.scrollY > 300) {
@@ -222,7 +211,7 @@
                         backToTopButton.style.opacity = '0';
                     }
                 });
-
+                
                 // Scroll fluide vers le haut quand on clique
                 backToTopButton.addEventListener('click', () => {
                     window.scrollTo({
@@ -230,14 +219,29 @@
                         behavior: 'smooth'
                     });
                 });
+                
+                </script>
 
-            </script>
-
-        </div> <!--pour Lignes background-->
-    </section> <!--pour Lignes background-->
-    <!--Fin ligne background-->
+</div> <!--pour Lignes background-->
+</section> <!--pour Lignes background-->
+<!--Fin ligne background-->
 
 
 </body>
 
 </html>
+
+
+<!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
+<!-- <h1 data-bind-global="count"></h1> -->
+
+<!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
+<!-- <section id="teamList">
+</section> -->
+
+<!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
+<!-- <div id="messageContainer"></div> -->
+
+<!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
+<!-- <form id="downloadForm">
+</form> -->

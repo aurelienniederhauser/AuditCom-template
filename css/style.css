@@ -6,70 +6,75 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background: #f5f5f5;
-  padding: 0;
-  color: black;
+    font-family: 'Montserrat', sans-serif;
+    background: #f5f5f5;
+    padding: 0;
+    color: black;
 }
 
-h1, h2, h3 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
 }
 
 img {
-  width: 250px;
+    width: 250px;
 }
 
 input,
 label,
 button {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 }
 
 
 
 /* BIGPICTURE */
 #BigPicture {
-  position: relative;
-  width: 100%;
-  height: 50vh;
-  overflow: hidden; /* OBLIGATOIRE pour couper le zoom */
-  display: flex;
-  align-items: end;
-  padding-left: 5vw;
-  padding-bottom: 30px;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    /* OBLIGATOIRE pour couper le zoom */
+    display: flex;
+    align-items: end;
+    padding-left: 5vw;
+    padding-bottom: 30px;
 }
 
 /* IMAGE */
 #BigPicture img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 
-  transition: transform 1.5s ease; /* animation douce */
+    transition: transform 1.5s ease;
+    /* animation douce */
 }
 
 /* ZOOM AU SURVOL */
 #BigPicture:hover img {
-  transform: scale(1.08); /* zoom progressif */
+    transform: scale(1.08);
+    /* zoom progressif */
 }
 
 
 #BigPicture h2 {
-  position: relative;
-  z-index: 1;
-  color: white;
-  font-size: 6rem;
-  font-weight: 700;
-  max-width: 70%;
-  filter: drop-shadow(0 0 0.75rem #686868);
-  line-height: 1.05em;
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 6rem;
+    font-weight: 700;
+    max-width: 70%;
+    filter: drop-shadow(0 0 0.75rem #686868);
+    line-height: 1.05em;
 }
 
 
@@ -81,68 +86,68 @@ button {
 
 /* HERO */
 #Hero {
-  height: 60vh;
-  margin: 5vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 4rem 0;
+    height: 60vh;
+    margin: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem 0;
 }
 
 #Hero h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  max-width: 70vw;
-  line-height: 1.2em;
-  margin-bottom: 20px;
+    font-size: 4rem;
+    font-weight: 700;
+    max-width: 70vw;
+    line-height: 1.2em;
+    margin-bottom: 20px;
 }
 
 #Hero p {
-  margin-top: 2rem;
-  font-size: 1.8rem;
-  color: #686868;
-  max-width: 50vw;
-  margin-bottom: 50px;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    color: #686868;
+    max-width: 50vw;
+    margin-bottom: 50px;
 }
 
 #Hero a {
-  align-self: center;
-  margin-top: auto;
-  padding: 1rem 2.5rem;
-  background: #F2C94C;
-  color: black;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 600;
-  border-radius: 999px;
+    align-self: center;
+    margin-top: auto;
+    padding: 1rem 2.5rem;
+    background: #F2C94C;
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 999px;
 
-  transition: 
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background-color 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
 }
 
 #Hero a:hover {
-  transform: scale(1.08);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-  background: #1F7A4D;
-  color: #F5F5F5;
+    transform: scale(1.08);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    background: #1F7A4D;
+    color: #F5F5F5;
 }
 
 
 @media (max-width: 768px) {
-  #Hero {
-    height: auto;
-    padding: 3rem;
-  }
+    #Hero {
+        height: auto;
+        padding: 3rem;
+    }
 
-  #Hero h1 {
-    font-size: 2.2rem;
-  }
+    #Hero h1 {
+        font-size: 2.2rem;
+    }
 
-  #Hero p {
-    font-size: 1.05rem;
-  }
+    #Hero p {
+        font-size: 1.05rem;
+    }
 }
 
 
@@ -158,7 +163,8 @@ button {
 
 /* TITRE */
 #Stats h2 {
-    font-size: 4rem; /* plus petit que ton précédent 4rem */
+    font-size: 4rem;
+    /* plus petit que ton précédent 4rem */
     font-weight: 700;
     margin-bottom: 50px;
     text-align: left;
@@ -168,7 +174,7 @@ button {
 
 /* CARDS */
 #Stats div[id^="Card"] {
-    width:60%;
+    width: 60%;
     margin-bottom: 4rem;
     display: flex;
     flex-direction: row;
@@ -176,12 +182,14 @@ button {
 }
 
 /* Cartes de gauche */
-#Card1, #Card3 {
+#Card1,
+#Card3 {
     justify-content: flex-start;
 }
 
 /* Cartes de droite */
-#Card2, #Card4 {
+#Card2,
+#Card4 {
     justify-content: flex-end;
     margin-left: auto;
 }
@@ -211,7 +219,8 @@ button {
 @media (max-width: 768px) {
     #Stats div[id^="Card"] {
         width: 100%;
-        justify-content: flex-start !important; /* toutes cartes à gauche */
+        justify-content: flex-start !important;
+        /* toutes cartes à gauche */
         text-align: left !important;
         margin-bottom: 2rem;
     }
@@ -233,8 +242,10 @@ button {
 /* Ajout de padding et coins arrondis aux cartes */
 #Stats div[id^="Card"] {
     border-radius: 20px;
-    padding: 2rem; /* espace intérieur pour le texte et numéro */
-    transition: all 0.3s ease; /* animation smooth */
+    padding: 2rem;
+    /* espace intérieur pour le texte et numéro */
+    transition: all 0.3s ease;
+    /* animation smooth */
 }
 
 /* Hover : agrandissement et ombre */
@@ -259,8 +270,10 @@ button {
     margin: 5vw;
     position: relative;
 }
+
 #Clubs h2 {
-    font-size: 4rem; /* plus petit que ton précédent 4rem */
+    font-size: 4rem;
+    /* plus petit que ton précédent 4rem */
     font-weight: 700;
     margin-bottom: 50px;
     text-align: left;
@@ -269,114 +282,130 @@ button {
 }
 
 /* ===== Carousel Clubs (moderne, lisible) ===== */
-.club-carousel-wrapper{
-  width: 100%;
-  overflow: hidden;
-  padding: 50px 0;
-  background: transparent; /* ou #f9f9f9 si tu veux */
+.club-carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    padding: 50px 0;
+    background: transparent;
+    /* ou #f9f9f9 si tu veux */
 }
 
-.club-carousel-track{
-  display: flex;
-  align-items: stretch;
-  gap: 14px;                          /* cartes proches */
-  padding: 6px 2px;
-  width: max-content;
-  will-change: transform;
-  animation: clubScroll var(--club-scroll-duration, 14s) linear infinite; /* + rapide */
+.club-carousel-track {
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+    /* cartes proches */
+    padding: 6px 2px;
+    width: max-content;
+    will-change: transform;
+    animation: clubScroll var(--club-scroll-duration, 14s) linear infinite;
+    /* + rapide */
 }
 
-@keyframes clubScroll{
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+@keyframes clubScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 /* Carte */
-.club-card{
-  flex: 0 0 clamp(240px, 26vw, 300px); /* + grand */
-  border: 1px solid rgba(0,0,0,0.10);
-  border-radius: 16px;
-  background: rgba(255,255,255,0.95);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-  padding: 16px 16px 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: center;
-  transition: transform .2s ease, box-shadow .2s ease;
+.club-card {
+    flex: 0 0 clamp(240px, 26vw, 300px);
+    /* + grand */
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    padding: 16px 16px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.club-card:hover{
-  box-shadow: 0 14px 32px rgba(0,0,0,0.10);
+.club-card:hover {
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.10);
 }
 
 /* Logo dans un "badge" */
-.club-card img{
-  width: 68px !important;
-  height: 68px !important;
-  object-fit: contain;
-  border-radius: 14px;
-  padding: 10px;
-  background: #f6f7f8;
-  border: 1px solid rgba(0,0,0,0.06);
-  margin: 0 auto;
+.club-card img {
+    width: 68px !important;
+    height: 68px !important;
+    object-fit: contain;
+    border-radius: 14px;
+    padding: 10px;
+    background: #f6f7f8;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    margin: 0 auto;
 }
 
 /* Titre */
-.club-card h4{
-  margin: 0;
-  font-size: 15px;
-  font-weight: 800;
-  line-height: 1.2;
-  color: #111;
+.club-card h4 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #111;
 }
 
 /* Auteur(s) */
-.club-card p{
-  margin: 0;
-  font-size: 12.5px;
-  line-height: 1.35;
-  color: rgba(0,0,0,0.62);
+.club-card p {
+    margin: 0;
+    font-size: 12.5px;
+    line-height: 1.35;
+    color: rgba(0, 0, 0, 0.62);
 }
 
 /* Responsive : force 3 visibles sur tablette */
-@media (max-width: 1024px){
-  .club-card{ flex-basis: clamp(200px, 32vw, 260px); }
+@media (max-width: 1024px) {
+    .club-card {
+        flex-basis: clamp(200px, 32vw, 260px);
+    }
 }
 
 /* Mobile */
-@media (max-width: 768px){
-  .club-card{ flex-basis: clamp(220px, 70vw, 320px); }
+@media (max-width: 768px) {
+    .club-card {
+        flex-basis: clamp(220px, 70vw, 320px);
+    }
 }
 
-.club-carousel-wrapper{
-  position: relative; /* nécessaire pour les overlays */
+.club-carousel-wrapper {
+    position: relative;
+    /* nécessaire pour les overlays */
 }
 
 /* Fondu gauche/droite */
 .club-carousel-wrapper::before,
-.club-carousel-wrapper::after{
-  content: "";
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 90px;                /* largeur du fondu */
-  pointer-events: none;       /* ne bloque pas le hover */
-  z-index: 5;
+.club-carousel-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 90px;
+    /* largeur du fondu */
+    pointer-events: none;
+    /* ne bloque pas le hover */
+    z-index: 5;
 }
 
-.club-carousel-wrapper::before{
-  left: 0;
-  background: linear-gradient(to right,
-    rgba(245,245,245,1) 0%,
-    rgba(245,245,245,0) 100%);
+.club-carousel-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right,
+            rgba(245, 245, 245, 1) 0%,
+            rgba(245, 245, 245, 0) 100%);
 }
 
-.club-carousel-wrapper::after{
-  right: 0;
-  background: linear-gradient(to left,
-    rgba(245,245,245,1) 0%,
-    rgba(245,245,245,0) 100%);
+.club-carousel-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left,
+            rgba(245, 245, 245, 1) 0%,
+            rgba(245, 245, 245, 0) 100%);
 }
 
 
@@ -401,30 +430,37 @@ button {
     margin-right: 5vw;
     height: 60vh;
     display: flex;
-    align-items: center;         /* centre verticalement */
-    justify-content: flex-start; /* aligne à gauche */
+    align-items: center;
+    /* centre verticalement */
+    justify-content: flex-start;
+    /* aligne à gauche */
     font-family: 'Montserrat', sans-serif;
 }
 
 #Citation p {
-    font-weight: 400;  
-    font-size: clamp(1.5rem, 3vw, 3rem); /* taille flexible */
+    font-weight: 400;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    /* taille flexible */
     margin: 0;
     color: #686868;
 
-    transition: transform 0.8s ease; /* animation smooth */
-    transform-origin: left;           /* agrandit depuis le bord gauche */
+    transition: transform 0.8s ease;
+    /* animation smooth */
+    transform-origin: left;
+    /* agrandit depuis le bord gauche */
 }
 
 #Citation p:hover {
-    transform: scale(1.05);           /* grossit légèrement */
+    transform: scale(1.05);
+    /* grossit légèrement */
 }
 
 
 /* Ajustement supplémentaire pour écrans très petits */
 @media (max-width: 480px) {
     #Citation {
-        height: auto; /* la section s'adapte à la hauteur du texte */
+        height: auto;
+        /* la section s'adapte à la hauteur du texte */
         margin-left: 3vw;
         margin-right: 3vw;
         padding-top: 2rem;
@@ -432,7 +468,8 @@ button {
     }
 
     #Citation p {
-        font-size: 1.8rem; /* taille confortable sur mobile */
+        font-size: 1.8rem;
+        /* taille confortable sur mobile */
     }
 }
 
@@ -446,81 +483,82 @@ button {
 
 /* FORMULAIRE */
 #Formulaire {
-  background: #ffffff;
-  padding: 5vw;
+    background: #ffffff;
+    padding: 5vw;
 }
 
 #Formulaire h2 {
-  text-align: left;
-  margin-bottom: 4rem;
-  font-size: 4rem;
-  line-height: 1.05em;
+    text-align: left;
+    margin-bottom: 4rem;
+    font-size: 4rem;
+    line-height: 1.05em;
 }
 
 #Formulaire form {
-  width: 70vw;
-  max-width: 900px;
-  margin: 0 auto;
+    width: 70vw;
+    max-width: 900px;
+    margin: 0 auto;
 
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 #Formulaire input[type="text"],
 #Formulaire input[type="email"] {
-  padding: 1rem 1.2rem;
-  font-size: 1.1rem;
-  border-radius: 12px;
-  border: 1px solid #ddd;
-  width: 100%;
+    padding: 1rem 1.2rem;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    width: 100%;
 }
 
 #Formulaire input:focus {
-  outline: none;
-  border-color: #1F7A4D;
-  box-shadow: 0 0 0 3px rgba(31, 122, 77, 0.2);
+    outline: none;
+    border-color: #1F7A4D;
+    box-shadow: 0 0 0 3px rgba(31, 122, 77, 0.2);
 }
 
 /* CHECKBOX + LABEL SUR LA MEME LIGNE */
 .checkbox-group {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  justify-content: flex-start; /* à gauche */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    /* à gauche */
 }
 
 .checkbox-group input[type="checkbox"] {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .checkbox-group label {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 /* BOUTON SUBMIT */
 #Formulaire button {
-  margin-top: 1rem;
-  padding: 1.2rem;
-  font-size: 1.3rem;
-  font-weight: 700;
-  border-radius: 999px;
-  background: #F2C94C;
-  color: black;
-  border: none;
-  cursor: pointer;
+    margin-top: 1rem;
+    padding: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 999px;
+    background: #F2C94C;
+    color: black;
+    border: none;
+    cursor: pointer;
 
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background-color 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
 }
 
 #Formulaire button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 14px 30px rgba(31, 122, 77, 0.35);
-  background: #1F7A4D;
-  color: #F5F5F5;
+    transform: scale(1.05);
+    box-shadow: 0 14px 30px rgba(31, 122, 77, 0.35);
+    background: #1F7A4D;
+    color: #F5F5F5;
 }
 
 
@@ -535,43 +573,113 @@ footer {
 }
 
 footer #source {
-  margin-left: auto; /* pousse le texte à droite */
-  text-align: right;
+    margin-left: auto;
+    /* pousse le texte à droite */
+    text-align: right;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  #Formulaire form {
-    width: 90vw;
-    padding: 2rem;
-  }
+    #Formulaire form {
+        width: 90vw;
+        padding: 2rem;
+    }
 
-  #Formulaire button {
-    font-size: 1.1rem;
-  }
+    #Formulaire button {
+        font-size: 1.1rem;
+    }
 }
+
+
+
+
+
+/* ===== Progress bar (téléchargement PDF) ===== */
+#messageContainer{
+  margin-top: 18px;
+  width: 100%;
+}
+
+/* Si la barre est un <progress> */
+#messageContainer progress{
+  width: 100%;
+  height: 14px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 999px;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+/* Background (Chrome / Safari) */
+#messageContainer progress::-webkit-progress-bar{
+  background-color: #e5e5e5;
+  border-radius: 999px;
+}
+
+/* Barre qui progresse */
+#messageContainer progress::-webkit-progress-value{
+  background: linear-gradient(90deg, #1F7A4D, #27ae60);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+/* Firefox */
+#messageContainer progress::-moz-progress-bar{
+  background: linear-gradient(90deg, #1F7A4D, #27ae60);
+  border-radius: 999px;
+}
+
+/* Texte de statut (si le JS affiche du texte) */
+#messageContainer{
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1F7A4D;
+}
+
+/* Petit effet "glow" quand ça progresse */
+#messageContainer progress::-webkit-progress-value{
+  box-shadow: 0 0 10px rgba(31,122,77,0.4);
+}
+
+
+
+
+
 
 
 
 /* BACKTOTOP */
 #backToTop {
-    position: fixed;        /* reste collé à l'écran */
-    bottom: 30px;           /* 30px du bas */
-    right: 30px;            /* 30px de la droite */
-    z-index: 1000;          /* devant tout */
-    width: 50px;            /* largeur fixe */
-    height: 50px;           /* hauteur égale à largeur */
+    position: fixed;
+    /* reste collé à l'écran */
+    bottom: 30px;
+    /* 30px du bas */
+    right: 30px;
+    /* 30px de la droite */
+    z-index: 1000;
+    /* devant tout */
+    width: 50px;
+    /* largeur fixe */
+    height: 50px;
+    /* hauteur égale à largeur */
     background-color: #1F7A4D;
     color: white;
     border: none;
-    border-radius: 50%;     /* rond parfait */
+    border-radius: 50%;
+    /* rond parfait */
     font-size: 1.5rem;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    opacity: 0;             /* invisible par défaut */
-    display: flex;          /* pour centrer le texte */
-    align-items: center;    /* centre verticalement */
-    justify-content: center;/* centre horizontalement */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    /* invisible par défaut */
+    display: flex;
+    /* pour centrer le texte */
+    align-items: center;
+    /* centre verticalement */
+    justify-content: center;
+    /* centre horizontalement */
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -594,17 +702,17 @@ footer #source {
 
 
 
-
 /*LINES BACKGROUND*/
 #LinesBackground {
-  background-color: #f5f5f5;
-  background-image: url("../medias/Closed-Lines.svg");
-  background-repeat: no-repeat;
-  background-position: center 10vh;
-  background-size: 100% auto; 
-  min-height: 100vh;     
+    background-color: #f5f5f5;
+    background-image: url("../medias/Closed-Lines.svg");
+    background-repeat: no-repeat;
+    background-position: center 10vh;
+    background-size: 100% auto;
+    min-height: 100vh;
 }
 
 /* Contenu dans la section */
 #LinesBackground .content {
-  color: black;}
+    color: black;
+}
