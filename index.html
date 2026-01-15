@@ -19,9 +19,26 @@
     <!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
     <div id="messageContainer"></div>
 
+    <!--Formulaire-->
+    <section class="download-section">
     <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
     <form id="downloadForm">
-    </form>
+    <div class="row">
+      <input type="text" name="prenom" placeholder="Prénom" required>
+      <input type="text" name="nom" placeholder="Nom" required>
+    </div>
+
+    <input type="email" name="email" placeholder="Email" required>
+
+    <label class="checkbox">
+      <input type="checkbox" required>
+      J’accepte de recevoir la newsletter
+    </label>
+
+    <button type="submit">Télécharger le rapport !!</button>
+  </form>
+</section>
+    <!--Fin formulaire-->
 
 </body>
 </html>
