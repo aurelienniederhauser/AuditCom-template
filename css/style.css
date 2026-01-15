@@ -268,20 +268,95 @@ button {
     line-height: 1.05em;
 }
 
-/* =========================
-   CLUBS – CAROUSEL
-========================= */
-
-#Clubs {
-    margin: 5vw;
+/* ===== Carousel Clubs (moderne, lisible) ===== */
+.club-carousel-wrapper{
+  width: 100%;
+  overflow: hidden;
+  padding: 14px 0;
+  background: transparent; /* ou #f9f9f9 si tu veux */
 }
 
-#Clubs h2 {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 3rem;
-    line-height: 1.05em;
+.club-carousel-track{
+  display: flex;
+  align-items: stretch;
+  gap: 14px;                          /* cartes proches */
+  padding: 6px 2px;
+  width: max-content;
+  will-change: transform;
+  animation: clubScroll var(--club-scroll-duration, 14s) linear infinite; /* + rapide */
 }
+
+.club-carousel-wrapper:hover .club-carousel-track{
+  animation-play-state: paused;
+}
+
+@keyframes clubScroll{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Carte */
+.club-card{
+  flex: 0 0 clamp(210px, 24vw, 260px);  /* 3–4 visibles selon largeur écran */
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  padding: 14px 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.club-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.10);
+}
+
+/* Logo dans un "badge" */
+.club-card img{
+  width: 68px !important;
+  height: 68px !important;
+  object-fit: contain;
+  border-radius: 14px;
+  padding: 10px;
+  background: #f6f7f8;
+  border: 1px solid rgba(0,0,0,0.06);
+  margin: 0 auto;
+}
+
+/* Titre */
+.club-card h4{
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #111;
+}
+
+/* Auteur(s) */
+.club-card p{
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: rgba(0,0,0,0.62);
+}
+
+/* Responsive : force 3 visibles sur tablette */
+@media (max-width: 1024px){
+  .club-card{ flex-basis: clamp(200px, 32vw, 260px); }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .club-card{ flex-basis: clamp(220px, 70vw, 320px); }
+}
+
+
+
+
 
 
 
