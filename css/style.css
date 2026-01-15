@@ -115,13 +115,19 @@ button {
   font-size: 1.2rem;
   font-weight: 600;
   border-radius: 999px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
 }
 
 #Hero a:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.08);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
   background: #1F7A4D;
 }
+
 
 @media (max-width: 768px) {
   #Hero {
@@ -257,6 +263,21 @@ button {
     width: 70vw;
 }
 
+/* =========================
+   CLUBS – CAROUSEL
+========================= */
+
+#Clubs {
+    margin: 5vw;
+}
+
+#Clubs h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+
 
 
 
@@ -283,6 +304,7 @@ button {
     font-weight: 400;  
     font-size: clamp(1.5rem, 3vw, 3rem); /* taille flexible entre 1.5rem et 3rem selon largeur écran */
     margin: 0;
+    color: #686868;
 }
 
 /* Ajustement supplémentaire pour écrans très petits */
@@ -375,13 +397,19 @@ button {
   color: white;
   border: none;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
 }
 
 #Formulaire button:hover {
-  box-shadow: 0 10px 25px rgba(31, 122, 77, 0.35);
+  transform: scale(1.05);
+  box-shadow: 0 14px 30px rgba(31, 122, 77, 0.35);
   background: #1F7A4D;
 }
+
 
 /* FOOTER */
 footer {
