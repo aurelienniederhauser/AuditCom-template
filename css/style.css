@@ -35,13 +35,14 @@ button {
   position: relative;
   width: 100%;
   height: 50vh;
-  overflow: hidden;
+  overflow: hidden; /* OBLIGATOIRE pour couper le zoom */
   display: flex;
-  align-items: end; /* centre verticalement le texte */
+  align-items: end;
   padding-left: 5vw;
-  padding-bottom: 30px;  /* texte à gauche */
+  padding-bottom: 30px;
 }
 
+/* IMAGE */
 #BigPicture img {
   position: absolute;
   top: 0;
@@ -50,7 +51,15 @@ button {
   height: 100%;
   object-fit: cover;
   z-index: 0;
+
+  transition: transform 1.5s ease; /* animation douce */
 }
+
+/* ZOOM AU SURVOL */
+#BigPicture:hover img {
+  transform: scale(1.08); /* zoom progressif */
+}
+
 
 #BigPicture h2 {
   position: relative;
@@ -247,6 +256,13 @@ button {
     text-align: left;
     width: 70vw;
 }
+
+
+
+
+
+
+
 
 
 
