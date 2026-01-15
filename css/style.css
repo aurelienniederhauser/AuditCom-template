@@ -272,7 +272,7 @@ button {
 .club-carousel-wrapper{
   width: 100%;
   overflow: hidden;
-  padding: 14px 0;
+  padding: 50px 0;
   background: transparent; /* ou #f9f9f9 si tu veux */
 }
 
@@ -286,10 +286,6 @@ button {
   animation: clubScroll var(--club-scroll-duration, 14s) linear infinite; /* + rapide */
 }
 
-.club-carousel-wrapper:hover .club-carousel-track{
-  animation-play-state: paused;
-}
-
 @keyframes clubScroll{
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
@@ -297,12 +293,12 @@ button {
 
 /* Carte */
 .club-card{
-  flex: 0 0 clamp(210px, 24vw, 260px);  /* 3–4 visibles selon largeur écran */
+  flex: 0 0 clamp(240px, 26vw, 300px); /* + grand */
   border: 1px solid rgba(0,0,0,0.10);
   border-radius: 16px;
   background: rgba(255,255,255,0.95);
   box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-  padding: 14px 14px 12px;
+  padding: 16px 16px 14px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -311,7 +307,6 @@ button {
 }
 
 .club-card:hover{
-  transform: translateY(-3px);
   box-shadow: 0 14px 32px rgba(0,0,0,0.10);
 }
 
@@ -352,6 +347,36 @@ button {
 /* Mobile */
 @media (max-width: 768px){
   .club-card{ flex-basis: clamp(220px, 70vw, 320px); }
+}
+
+.club-carousel-wrapper{
+  position: relative; /* nécessaire pour les overlays */
+}
+
+/* Fondu gauche/droite */
+.club-carousel-wrapper::before,
+.club-carousel-wrapper::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 90px;                /* largeur du fondu */
+  pointer-events: none;       /* ne bloque pas le hover */
+  z-index: 5;
+}
+
+.club-carousel-wrapper::before{
+  left: 0;
+  background: linear-gradient(to right,
+    rgba(245,245,245,1) 0%,
+    rgba(245,245,245,0) 100%);
+}
+
+.club-carousel-wrapper::after{
+  right: 0;
+  background: linear-gradient(to left,
+    rgba(245,245,245,1) 0%,
+    rgba(245,245,245,0) 100%);
 }
 
 
