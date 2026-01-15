@@ -147,7 +147,7 @@ button {
 
 /* CARDS */
 #Stats div[id^="Card"] {
-    width: 45%;
+    width:60%;
     margin-bottom: 4rem;
     display: flex;
     flex-direction: row;
@@ -207,6 +207,83 @@ button {
         font-size: 1.3rem;
     }
 }
+
+/* Ajout de padding et coins arrondis aux cartes */
+#Stats div[id^="Card"] {
+    border-radius: 20px;
+    padding: 2rem; /* espace intérieur pour le texte et numéro */
+    transition: all 0.3s ease; /* animation smooth */
+}
+
+/* Hover : agrandissement et ombre */
+#Stats div[id^="Card"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CLUBS */
+#Clubs {
+    margin: 5vw;
+    position: relative;
+}
+#Clubs h2 {
+    font-size: 4rem; /* plus petit que ton précédent 4rem */
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: left;
+    width: 70vw;
+}
+
+
+
+
+
+/* CITATION */
+#Citation {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;         /* centre verticalement */
+    justify-content: flex-start; /* aligne à gauche */
+    font-family: 'Montserrat', sans-serif;
+}
+
+#Citation p {
+    font-weight: 400;  
+    font-size: clamp(1.5rem, 3vw, 3rem); /* taille flexible entre 1.5rem et 3rem selon largeur écran */
+    margin: 0;
+}
+
+/* Ajustement supplémentaire pour écrans très petits */
+@media (max-width: 480px) {
+    #Citation {
+        height: auto; /* la section s'adapte à la hauteur du texte */
+        margin-left: 3vw;
+        margin-right: 3vw;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    #Citation p {
+        font-size: 1.8rem; /* taille confortable sur mobile */
+    }
+}
+
+
+
+
+
 
 
 
