@@ -66,6 +66,30 @@ button {
 
 
 
+/*LINES BACKGROUND*/
+#LinesBackground {
+  background-color: #f5f5f5;
+  background-image: url("../medias/Lines.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto; 
+  min-height: 100vh;     
+}
+
+/* Contenu dans la section */
+#LinesBackground .content {
+  padding: 50px 5vw;
+  color: black;}
+
+
+/*----------- FIN LINES BACKGROUND-------------*/
+
+
+
+
+
+
+
 /* HERO */
 #Hero {
   height: 60vh;
