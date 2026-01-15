@@ -488,13 +488,6 @@ footer #source {
     transform: translateY(-3px);
 }
 
-
-
-
-
-
-
-
 /*LINES BACKGROUND*/
 #LinesBackground {
   background-color: #f5f5f5;
@@ -508,3 +501,144 @@ footer #source {
 /* Contenu dans la section */
 #LinesBackground .content {
   color: black;}
+
+  /* =========================
+   MOBILE ONLY 
+========================= */
+@media (max-width: 768px) {
+
+  /* GLOBAL */
+  body {
+    padding: 0;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* BIG PICTURE */
+  #BigPicture {
+    height: 40vh;
+    padding-left: 4vw;
+    padding-bottom: 20px;
+  }
+
+  #BigPicture h2 {
+    font-size: 2.5rem;
+    max-width: 90%;
+  }
+
+  /* HERO */
+  #Hero {
+    margin: 4vw;
+    padding: 2rem 0;
+    height: auto;
+  }
+
+  #Hero h1 {
+    font-size: 2.2rem;
+    max-width: 100%;
+  }
+
+  #Hero p {
+    font-size: 1.1rem;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  #Hero a {
+    font-size: 1rem;
+    padding: 0.9rem 2rem;
+  }
+
+  /* STATS */
+  #Stats {
+    margin: 4vw;
+  }
+
+  #Stats h2 {
+    font-size: 2.5rem;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  #Stats div[id^="Card"] {
+    width: 100%;
+    margin-left: 0 !important;
+    justify-content: flex-start !important;
+    flex-direction: row;
+    padding: 1.5rem;
+  }
+
+  .StatNumber {
+    font-size: 3.5rem;
+    margin-right: 1rem;
+  }
+
+  .StatText {
+    font-size: 1.1rem;
+  }
+
+  /* CITATION */
+  #Citation {
+    height: auto;
+    margin: 4vw;
+    padding: 2rem 0;
+  }
+
+  #Citation p {
+    font-size: 1.4rem;
+    line-height: 1.4em;
+  }
+
+  /* FORMULAIRE */
+  #Formulaire {
+    padding: 4vw;
+  }
+
+  #Formulaire h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  #Formulaire form {
+    width: 100%;
+    padding: 0;
+  }
+
+  #Formulaire input[type="text"],
+  #Formulaire input[type="email"] {
+    font-size: 1rem;
+  }
+
+  #Formulaire button {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+
+  /* FOOTER */
+  footer {
+    height: auto;
+    padding: 2rem 4vw;
+    text-align: left;
+  }
+
+  footer #source {
+    margin-left: 0;
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  /* BACK TO TOP */
+  #backToTop {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+  /* =========================
+   FIN MOBILE ONLY 
+========================= */
