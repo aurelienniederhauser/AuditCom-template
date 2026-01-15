@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,14 @@
     <script src="src/main.js" type="module" defer></script>
     <!--Open Graph-->
     <meta property="og:title" content="Comment un club peut réussir sa transformation digitale">
-    <meta property="og:description" content="Un rapport complet sur les stratégies digitales des clubs romands, professionnelles et amateurs.">
+    <meta property="og:description"
+        content="Un rapport complet sur les stratégies digitales des clubs romands, professionnelles et amateurs.">
     <meta property="og:image" content="https://www.monsite.ch/images/preview.png">
     <meta property="og:url" content="https://www.monsite.ch">
     <meta property="og:type" content="website">
 
 </head>
+
 <body>
     <section id="BigPicture">
         <img src="medias/stade.webp">
@@ -22,112 +25,118 @@
 
 
 
-    <section id="LinesBackground">  <!--pour: Lignes background-->
-    <div class="content">  <!--pour: Lignes background-->
+    <section id="LinesBackground"> <!--pour: Lignes background-->
+        <div class="content"> <!--pour: Lignes background-->
 
 
 
 
-    <section id="Hero">
-        <h1>Comment un club peut réussir sa transformation digitale</h1>
-        <p>Un rapport d’analyse complet sur les stratégies digitales de clubs romands, des structures professionnelles aux clubs amateurs, avec des recommandations concrètes et applicables.</p>
-        <a href=#Formulaire>Télécharger le rapport</a>
-    </section>
+            <section id="Hero">
+                <h1>Comment un club peut réussir sa transformation digitale</h1>
+                <p>Un rapport d’analyse complet sur les stratégies digitales de clubs romands, des structures
+                    professionnelles aux clubs amateurs, avec des recommandations concrètes et applicables.</p>
+                <a href=#Formulaire>Télécharger le rapport</a>
+            </section>
 
-    <section id="Stats">
-        <h2>Un état des lieux clair du digital dans le football</h2>
-        <div id="Card1">
-            <p class="StatNumber">21%</p>
-            <p class="StatText">des clubs n’ont pas de newsletter</p>
-        </div>
-        <div id="Card2">
-            <p class="StatNumber">1/4</p>
-            <p class="StatText">des clubs ont une application mobile</p>
-        </div>
-        <div id="Card3">
-            <p class="StatNumber">11%</p>
-            <p class="StatText">des sites sont multilingues</p>
-        </div>
-        <div id="Card4">
-            <p class="StatNumber">1/2</p>
-            <p class="StatText">des clubs capitalisent sur leur histoire</p>
-        </div>
-    </section>
+            <section id="Stats">
+                <h2>Un état des lieux clair du digital dans le football</h2>
+                <div id="Card1">
+                    <p class="StatNumber">21%</p>
+                    <p class="StatText">des clubs n’ont pas de newsletter</p>
+                </div>
+                <div id="Card2">
+                    <p class="StatNumber">1/4</p>
+                    <p class="StatText">des clubs ont une application mobile</p>
+                </div>
+                <div id="Card3">
+                    <p class="StatNumber">11%</p>
+                    <p class="StatText">des sites sont multilingues</p>
+                </div>
+                <div id="Card4">
+                    <p class="StatNumber">1/2</p>
+                    <p class="StatText">des clubs capitalisent sur leur histoire</p>
+                </div>
+            </section>
 
-    <section id="Clubs">
-        <h2>Les <span data-bind-global="count"></span> clubs analysés</h2>
-    </section>
-
-
-    <section id="Citation">
-        <p>« La transformation digitale n’est plus un luxe réservé aux grands clubs : c’est une opportunité stratégique accessible à toutes les structures, à condition de savoir comment l’aborder. »</p>
-    </section>
-    <section id="Formulaire">
-        <h2>Accéder aux connaissances du digital footballistique</h2>
-        <form id="downloadForm">
-            <input type="text" name="lastName" placeholder="Nom">
-            <input type="text" name="firstName" placeholder="Prénom">
-            <input type="email" name="email" placeholder="Email">
-
-            <!-- Checkbox + label sur la même ligne -->
-            <div class="checkbox-group">
-                <input type="checkbox" name="newsletterAgreement" id="consent">
-                <label for="consent">J'accepte de recevoir la newsletter</label>
-            </div>
-
-            <button type="submit">Télécharger le rapport</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>Nextcom - contact@nextcom.ch<br>
-        Avenue des Sports 20, 1401 Yverdon-les-Bains<br>
-        https://www.nextcom.ch</p>
-    </footer>
+            <section id="Clubs">
+                <h2>Les <span data-bind-global="count"></span> clubs analysés</h2>
+            </section>
 
 
+            <section id="Citation">
+                <p>« La transformation digitale n’est plus un luxe réservé aux grands clubs : c’est une opportunité
+                    stratégique accessible à toutes les structures, à condition de savoir comment l’aborder. »</p>
+            </section>
+            <section id="Formulaire">
+                <h2>Accéder aux connaissances du digital footballistique</h2>
+                <form id="downloadForm">
+                    <input type="text" name="lastName" placeholder="Nom">
+                    <input type="text" name="firstName" placeholder="Prénom">
+                    <input type="email" name="email" placeholder="Email">
 
-    <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
-    <h1 data-bind-global="count"></h1>
-    
-    <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
-    <section id="teamList">
-    </section>
+                    <!-- Checkbox + label sur la même ligne -->
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="newsletterAgreement" id="consent">
+                        <label for="consent">J'accepte de recevoir la newsletter</label>
+                    </div>
 
-    <!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
-    <div id="messageContainer"></div>
+                    <button type="submit">Télécharger le rapport</button>
+                </form>
+            </section>
 
-    <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
-    <form id="downloadForm">
-    </form>
+            <footer>
+                <p>Nextcom - contact@nextcom.ch<br>
+                    Avenue des Sports 20, 1401 Yverdon-les-Bains<br>
+                    https://www.nextcom.ch</p>
+                <p id="source">
+                    Image : Stade de Genève, Aurélien Ducret, unsplash.com
+                </p>
+            </footer>
 
-    <button id="backToTop" title="Remonter en haut">↑</button>
-    <script>
-        const backToTopButton = document.getElementById('backToTop');
 
-// Affiche le bouton après avoir scrollé 300px
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        backToTopButton.style.opacity = '1';
-    } else {
-        backToTopButton.style.opacity = '0';
-    }
-});
 
-// Scroll fluide vers le haut quand on clique
-backToTopButton.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
+            <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
+            <h1 data-bind-global="count"></h1>
 
-    </script>
+            <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
+            <section id="teamList">
+            </section>
 
-</div> <!--pour Lignes background-->
-</section>  <!--pour Lignes background-->
-  <!--Fin ligne background-->
+            <!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
+            <div id="messageContainer"></div>
+
+            <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
+            <form id="downloadForm">
+            </form>
+
+            <button id="backToTop" title="Remonter en haut">↑</button>
+            <script>
+                const backToTopButton = document.getElementById('backToTop');
+
+                // Affiche le bouton après avoir scrollé 300px
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) {
+                        backToTopButton.style.opacity = '1';
+                    } else {
+                        backToTopButton.style.opacity = '0';
+                    }
+                });
+
+                // Scroll fluide vers le haut quand on clique
+                backToTopButton.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+
+            </script>
+
+        </div> <!--pour Lignes background-->
+    </section> <!--pour Lignes background-->
+    <!--Fin ligne background-->
 
 
 </body>
+
 </html>

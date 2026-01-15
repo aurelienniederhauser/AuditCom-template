@@ -428,9 +428,15 @@ button {
 footer {
     background-color: #1F7A4D;
     color: #F5F5F5;
+    margin: 0;
     width: 100vw;
     height: 200px;
     padding: 50px 5vw 50px 5vw;
+}
+
+footer #source {
+  margin-left: auto; /* pousse le texte à droite */
+  text-align: right;
 }
 
 /* RESPONSIVE */
@@ -501,5 +507,4 @@ footer {
 
 /* Contenu dans la section */
 #LinesBackground .content {
-  padding: 50px 5vw;
   color: black;}
