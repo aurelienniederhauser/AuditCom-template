@@ -1,6 +1,10 @@
 @import "reset.css";
 
 /* GLOBAL */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background: #f5f5f5;
@@ -287,6 +291,7 @@ button {
 
 
 
+
 /* FORMULAIRE */
 #Formulaire {
   margin: 5vw;
@@ -295,6 +300,7 @@ button {
 #Formulaire h2 {
   text-align: left;
   margin-bottom: 2rem;
+  font-size: 4rem;
 }
 
 #Formulaire form {
@@ -380,4 +386,41 @@ footer {
   #Formulaire button {
     font-size: 1.1rem;
   }
+}
+
+
+
+/* BACKTOTOP */
+#backToTop {
+    position: fixed;        /* reste collé à l'écran */
+    bottom: 30px;           /* 30px du bas */
+    right: 30px;            /* 30px de la droite */
+    z-index: 1000;          /* devant tout */
+    width: 50px;            /* largeur fixe */
+    height: 50px;           /* hauteur égale à largeur */
+    background-color: #1F7A4D;
+    color: white;
+    border: none;
+    border-radius: 50%;     /* rond parfait */
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    opacity: 0;             /* invisible par défaut */
+    display: flex;          /* pour centrer le texte */
+    align-items: center;    /* centre verticalement */
+    justify-content: center;/* centre horizontalement */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #F2C94C;
+    color: #1F7A4D;
+    transform: translateY(-3px);
+}
+
+
+#backToTop:hover {
+    background-color: #F2C94C;
+    color: #1F7A4D;
+    transform: translateY(-3px);
 }

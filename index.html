@@ -69,7 +69,7 @@
             <button type="submit">Télécharger le rapport</button>
         </form>
     </section>
-    
+
     <footer>
         <p>Nextcom - contact@nextcom.ch<br>
         Avenue des Sports 20, 1401 Yverdon-les-Bains<br>
@@ -91,6 +91,29 @@
     <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
     <form id="downloadForm">
     </form>
+
+    <button id="backToTop" title="Remonter en haut">↑</button>
+    <script>
+        const backToTopButton = document.getElementById('backToTop');
+
+// Affiche le bouton après avoir scrollé 300px
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopButton.style.opacity = '1';
+    } else {
+        backToTopButton.style.opacity = '0';
+    }
+});
+
+// Scroll fluide vers le haut quand on clique
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+    </script>
 
 </body>
 </html>
