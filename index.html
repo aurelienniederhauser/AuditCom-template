@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing page</title>
+    <title>Landing page - Nextcom</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="src/main.js" type="module" defer></script>
+    <!--Open Graph-->
+    <meta property="og:title" content="Comment un club peut réussir sa transformation digitale">
+    <meta property="og:description" content="Un rapport complet sur les stratégies digitales des clubs romands, professionnelles et amateurs.">
+    <meta property="og:image" content="https://www.monsite.ch/images/preview.png">
+    <meta property="og:url" content="https://www.monsite.ch">
+    <meta property="og:type" content="website">
 
 </head>
 <body>
+    <section id="BigPicture">
+        <img src="medias/stade.webp">
+        <h2>Le football ne se joue pas que sur le terrain.</h2>
+    </section>
     <section id="Hero">
         <h1>Comment un club peut réussir sa transformation digitale</h1>
         <p>Un rapport d’analyse complet sur les stratégies digitales de clubs romands, des structures professionnelles aux clubs amateurs, avec des recommandations concrètes et applicables.</p>
-        <a href=#>Télécharger le rapport !!</a>
-    </section>
-    <section id="BigPicture">
-        <img src="">
-        <img src="">
-        <h2>Le football ne se joue pas que sur le terrain.</h2>
+        <a href=#Formulaire>Télécharger le rapport</a>
     </section>
     <section id="Stats">
         <h2>Un état des lieux clair du digital dans le football</h2>
@@ -60,15 +65,20 @@
             <input type="text" name="lastName" placeholder="Nom">
             <input type="text" name="firstName" placeholder="Prénom">
             <input type="email" name="email" placeholder="Email">
-            <input type="checkbox" name="newsletterAgreement" id="consent">
-            <label for="consent">J'accepte de recevoir la newsletter</label>
-            <button type="submit">Télécharger</button>
+
+            <!-- Checkbox + label sur la même ligne -->
+            <div class="checkbox-group">
+                <input type="checkbox" name="newsletterAgreement" id="consent">
+                <label for="consent">J'accepte de recevoir la newsletter</label>
+            </div>
+
+            <button type="submit">Télécharger le rapport</button>
         </form>
     </section>
     <footer>
         <p>Nextcom - contact@nextcom.ch<br>
-Avenue des Sports 20, 1401 Yverdon-les-Bains<br>
-https://www.nextcom.ch</p>
+        Avenue des Sports 20, 1401 Yverdon-les-Bains<br>
+        https://www.nextcom.ch</p>
     </footer>
 
 

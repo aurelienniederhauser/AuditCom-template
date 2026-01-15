@@ -26,21 +26,116 @@ button {
 
 
 
+/* BIGPICTURE */
+#BigPicture {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  display: flex;
+  align-items: end; /* centre verticalement le texte */
+  padding-left: 5vw;
+  padding-bottom: 30px;  /* texte à gauche */
+}
 
-/*FORMULAIRE*/
+#BigPicture img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
 
-/* SECTION FORMULAIRE */
-#Formulaire {
+#BigPicture h2 {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 6rem;
+  font-weight: 700;
+  max-width: 70%;
+  filter: drop-shadow(0 0 0.75rem #686868);
+  line-height: 1.1em;
+}
+
+
+
+
+
+
+
+
+/* HERO */
+#Hero {
+  height: 60vh;
+  margin: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 4rem 0;
 }
 
-/* TITRE À GAUCHE */
+#Hero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  max-width: 70vw;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+}
+
+#Hero p {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: #686868;
+  max-width: 800px;
+  margin-bottom: 50px;
+}
+
+#Hero a {
+  align-self: center;
+  margin-top: auto;
+  padding: 1rem 2.5rem;
+  background: #F2C94C;
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#Hero a:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background: #1F7A4D;
+}
+
+@media (max-width: 768px) {
+  #Hero {
+    height: auto;
+    padding: 3rem;
+  }
+
+  #Hero h1 {
+    font-size: 2.2rem;
+  }
+
+  #Hero p {
+    font-size: 1.05rem;
+  }
+}
+
+
+/* FORMULAIRE */
+#Formulaire {
+  margin: 5vw;
+}
+
 #Formulaire h2 {
   text-align: left;
   margin-bottom: 2rem;
 }
 
-/* FORMULAIRE (centré sous le titre) */
 #Formulaire form {
   width: 70vw;
   max-width: 900px;
@@ -55,7 +150,6 @@ button {
   gap: 1.5rem;
 }
 
-/* INPUTS */
 #Formulaire input[type="text"],
 #Formulaire input[type="email"] {
   padding: 1rem 1.2rem;
@@ -71,16 +165,19 @@ button {
   box-shadow: 0 0 0 3px rgba(31, 122, 77, 0.2);
 }
 
-/* CHECKBOX INLINE */
-#Formulaire input[type="checkbox"] {
-  width: auto;
+/* CHECKBOX + LABEL SUR LA MEME LIGNE */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: flex-start; /* à gauche */
+}
+
+.checkbox-group input[type="checkbox"] {
   transform: scale(1.2);
 }
 
-#Formulaire label[for="consent"] {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+.checkbox-group label {
   font-size: 1rem;
 }
 
@@ -99,13 +196,11 @@ button {
 }
 
 #Formulaire button:hover {
-  transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(31, 122, 77, 0.35);
+  background: #1F7A4D;
 }
 
-
-
-/*FOOTER*/
+/* FOOTER */
 footer {
     background-color: #1F7A4D;
     color: #F5F5F5;
@@ -114,19 +209,10 @@ footer {
     padding: 50px 5vw 50px 5vw;
 }
 
-
-
-
-
-
-
-
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
   #Formulaire form {
     width: 90vw;
-    height: 100vh;
     padding: 2rem;
   }
 
