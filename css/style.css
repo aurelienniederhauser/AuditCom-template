@@ -56,7 +56,7 @@ button {
   font-weight: 700;
   max-width: 70%;
   filter: drop-shadow(0 0 0.75rem #686868);
-  line-height: 1.1em;
+  line-height: 1.05em;
 }
 
 
@@ -88,7 +88,7 @@ button {
   margin-top: 2rem;
   font-size: 1.8rem;
   color: #686868;
-  max-width: 800px;
+  max-width: 50vw;
   margin-bottom: 50px;
 }
 
@@ -124,6 +124,90 @@ button {
     font-size: 1.05rem;
   }
 }
+
+
+
+
+
+
+/* STATS */
+#Stats {
+    margin: 5vw;
+    position: relative;
+}
+
+/* TITRE */
+#Stats h2 {
+    font-size: 4rem; /* plus petit que ton précédent 4rem */
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: left;
+    width: 70vw;
+}
+
+/* CARDS */
+#Stats div[id^="Card"] {
+    width: 45%;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Cartes de gauche */
+#Card1, #Card3 {
+    justify-content: flex-start;
+}
+
+/* Cartes de droite */
+#Card2, #Card4 {
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+/* NUMÉROS */
+.StatNumber {
+    font-size: 10rem;
+    color: #1F7A4D;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+/* TEXTES */
+.StatText {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: black;
+}
+
+/* CONTENEUR FLEX POUR ZIGZAG */
+#Stats {
+    display: flex;
+    flex-direction: column;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    #Stats div[id^="Card"] {
+        width: 100%;
+        justify-content: flex-start !important; /* toutes cartes à gauche */
+        text-align: left !important;
+        margin-bottom: 2rem;
+    }
+
+    .StatNumber {
+        font-size: 3rem;
+    }
+
+    .StatText {
+        font-size: 1.2rem;
+    }
+
+    #Stats h2 {
+        font-size: 1.3rem;
+    }
+}
+
 
 
 /* FORMULAIRE */
