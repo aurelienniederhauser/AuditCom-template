@@ -568,6 +568,10 @@ footer {
     width: 100vw;
     height: 200px;
     padding: 50px 5vw 50px 5vw;
+
+    display: flex; /*Alignement-creditsImage-footer*/
+    justify-content: space-between;/*Alignement-creditsImage-footer*/
+    align-items: flex-start; /*Alignement-creditsImage-footer*/
 }
 
 footer #source {
