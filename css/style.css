@@ -112,7 +112,7 @@ button {
 
 #Hero a {
     align-self: center;
-    margin-top: auto;
+    margin-top: 5rem; /*Espace-premier-bouton-et-texte: amodifier pour plus d'expace avant le bouton*/
     padding: 1rem 2.5rem;
     background: #F2C94C;
     color: black;
@@ -154,12 +154,33 @@ button {
 
 
 
-
+/*Espace-premier-bouton-et-texte : supprimer ce qui est commenté ci-dessous*/
 /* STATS */
-#Stats {
+/*#Stats {
+    margin-top: 12vh;
     margin: 5vw;
     position: relative;
+}*/
+
+/* CONTENEUR FLEX POUR ZIGZAG */
+/*#Stats {
+    display: flex;
+    flex-direction: column;
+}*/
+
+/*---Espace-premier-bouton-et-texte---*/
+
+#Stats {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 70vh; /*A modifier pour espacement après premier bouton*/ 
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 5vw;
 }
+/*---Fin espace-prmeier-bouton-et-texte---*/
 
 /* TITRE */
 #Stats h2 {
@@ -209,11 +230,7 @@ button {
     color: black;
 }
 
-/* CONTENEUR FLEX POUR ZIGZAG */
-#Stats {
-    display: flex;
-    flex-direction: column;
-}
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
