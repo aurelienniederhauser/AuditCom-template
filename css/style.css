@@ -565,7 +565,7 @@ footer {
     background-color: #1F7A4D;
     color: #F5F5F5;
     margin: 0;
-    width: 100vw;
+    /*width: 100vw; Alignement-creditsImage-footer*/
     height: 200px;
     padding: 50px 5vw 50px 5vw;
 
