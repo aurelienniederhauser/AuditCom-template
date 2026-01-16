@@ -1,9 +1,11 @@
 import { loadTemplate } from "./loadTemplate.js";
 import { fillTemplate, fillGlobals } from "./templating.js";
-
+import { loadClubsCarousel } from "./teamCarousel.js";
 // ============================================================================
 // Constants
 // ============================================================================
+
+loadClubsCarousel();
 
 const BASE_URL = "https://auditcom.onrender.com";
 const API_URL = `${BASE_URL}/api`;
@@ -199,35 +201,34 @@ function downloadBlob(blob, filename) {
 /**
  * Fetches PDF list from API and renders items
  */
-async function loadPDFList() {
-  try {
-    const response = await fetch(API_ENDPOINTS.pdfs);
-    const payload = await response.json();
+// async function loadPDFList() {
+//   try {
+//     const response = await fetch(API_ENDPOINTS.pdfs);
+//     const payload = await response.json();
     
-    // Set global metadata
-    fillGlobals({
-      count: payload.count,
-    });
+//     // Set global metadata
+//     fillGlobals({
+//       count: payload.count,
+//     });
     
-    // Render PDF items
-    const items = Array.isArray(payload.pdfs) ? payload.pdfs : [];
-    
-    items.forEach((item) => {
-      container.append(
-        fillTemplate(template, {
-          teamName: item.teamName ?? "—",
-          title: item.title ?? "",
-          author: item.author ?? "",
-          uploadedAt: formatDate(item.uploadedAt),
-          logoUrl: buildLogoUrl(item.logoUrl),
-        })
-      );
-    });
-  } catch (error) {
-    console.error("Error loading PDF list:", error);
-    showMessage("Erreur lors du chargement de la liste", "error");
-  }
-}
+//     // Render PDF items
+//     const items = Array.isArray(payload.pdfs) ? payload.pdfs : [];
+//     items.forEach((item) => {
+//       container.append(
+//         fillTemplate(template, {
+//           teamName: item.teamName ?? "—",
+//           title: item.title ?? "",
+//           author: item.author ?? "",
+//           uploadedAt: formatDate(item.uploadedAt),
+//           logoUrl: buildLogoUrl(item.logoUrl),
+//         })
+//       );
+//     });
+//   } catch (error) {
+//     console.error("Error loading PDF list:", error);
+//     showMessage("Erreur lors du chargement de la liste", "error");
+//   }
+// }
 
 /**
  * Streams PDF download with progress tracking
