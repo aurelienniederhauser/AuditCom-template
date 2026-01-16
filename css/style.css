@@ -1,6 +1,8 @@
 @import "reset.css";
 
-/* GLOBAL */
+/* =======================
+   GLOBAL
+   ======================= */
 html {
     scroll-behavior: smooth;
 }
@@ -30,13 +32,9 @@ button {
     font-size: 16px;
 }
 
-
-
-
-
-
-
-/* BIGPICTURE */
+/* =======================
+   BIGPICTURE
+   ======================= */
 #BigPicture {
     position: relative;
     width: 100%;
@@ -58,7 +56,6 @@ button {
     height: 100%;
     object-fit: cover;
     z-index: 0;
-
     transition: transform 1.5s ease;
     /* animation douce */
 }
@@ -66,9 +63,7 @@ button {
 /* ZOOM AU SURVOL */
 #BigPicture:hover img {
     transform: scale(1.08);
-    /* zoom progressif */
 }
-
 
 #BigPicture h1 {
     position: relative;
@@ -81,14 +76,9 @@ button {
     line-height: 1.05em;
 }
 
-
-
-
-
-
-
-
-/* HERO */
+/* =======================
+   HERO
+   ======================= */
 #Hero {
     height: 60vh;
     margin: 5vw;
@@ -122,7 +112,8 @@ button {
 
 #Hero a {
     align-self: center;
-    margin-top: 10rem; /*Espace-premier-bouton-et-texte: amodifier pour plus d'expace avant le bouton*/
+    margin-top: 10rem;
+    /* Espace-premier-bouton-et-texte */
     padding: 1.4rem 3.5rem;
     background: #F2C94C;
     color: black;
@@ -130,11 +121,7 @@ button {
     font-size: 1.4rem;
     font-weight: 600;
     border-radius: 999px;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background-color 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 #Hero a:hover {
@@ -143,7 +130,6 @@ button {
     background: #1F7A4D;
     color: #F5F5F5;
 }
-
 
 @media (max-width: 768px) {
     #Hero {
@@ -160,34 +146,23 @@ button {
     }
 }
 
-
-
-
-
-
-/* STATS */
-/*#Stats {
-    margin: 5vw;
-    position: relative;
-}*/
-/*---Espace-premier-bouton-et-texte---*/
-
+/* =======================
+   STATS
+   ======================= */
 #Stats {
     position: relative;
     display: flex;
     flex-direction: column;
-
-    margin-top: 70vh; /*A modifier pour espacement après premier bouton*/ 
+    margin-top: 70vh;
+    /* Espace après premier bouton */
     margin-left: 5vw;
     margin-right: 5vw;
     margin-bottom: 5vw;
 }
-/*---Fin espace-prmeier-bouton-et-texte---*/
 
 /* TITRE */
 #Stats h2 {
     font-size: 4rem;
-    /* plus petit que ton précédent 4rem */
     font-weight: 700;
     margin-bottom: 50px;
     text-align: left;
@@ -195,13 +170,24 @@ button {
     line-height: 1.05em;
 }
 
-/* CARDS */
+/* CARDS (structure + style commun) */
 #Stats div[id^="Card"] {
     width: 60%;
     margin-bottom: 4rem;
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    /* animation smooth */
+}
+
+#Stats div[id^="Card"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    background-color: #F5F5F5;
 }
 
 /* Cartes de gauche */
@@ -217,7 +203,7 @@ button {
     margin-left: auto;
 }
 
-/* NUMÉROS */
+/* NUMÉROS / TEXTES */
 .StatNumber {
     font-size: 10rem;
     color: #1F7A4D;
@@ -225,20 +211,12 @@ button {
     margin-right: 1rem;
 }
 
-/* TEXTES */
 .StatText {
     font-size: 2.2rem;
     font-weight: bold;
     color: black;
 }
 
-/* CONTENEUR FLEX POUR ZIGZAG */
-/*#Stats {
-    display: flex;
-    flex-direction: column;
-}*/
-
-/* RESPONSIVE */
 @media (max-width: 768px) {
     #Stats div[id^="Card"] {
         width: 100%;
@@ -262,33 +240,9 @@ button {
     }
 }
 
-/* Ajout de padding et coins arrondis aux cartes */
-#Stats div[id^="Card"] {
-    border-radius: 20px;
-    padding: 2rem;
-    /* espace intérieur pour le texte et numéro */
-    transition: all 0.3s ease;
-    /* animation smooth */
-}
-
-/* Hover : agrandissement et ombre */
-#Stats div[id^="Card"]:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-    background-color: #F5F5F5;
-}
-
-
-
-
-
-
-
-
-
-
-
-/* CLUBS */
+/* =======================
+   CLUBS
+   ======================= */
 #Clubs {
     margin: 5vw 5vw 0px 5vw;
     position: relative;
@@ -296,7 +250,6 @@ button {
 
 #Clubs h2 {
     font-size: 4rem;
-    /* plus petit que ton précédent 4rem */
     font-weight: 700;
     margin-bottom: 50px;
     text-align: left;
@@ -304,13 +257,14 @@ button {
     line-height: 1.05em;
 }
 
-/* ===== Carousel Clubs (moderne, lisible) ===== */
+/* Carousel */
 .club-carousel-wrapper {
     width: 100%;
     overflow: hidden;
     padding: 50px 0;
     background: transparent;
-    /* ou #f9f9f9 si tu veux */
+    position: relative;
+    /* nécessaire pour les overlays */
 }
 
 .club-carousel-track {
@@ -322,7 +276,6 @@ button {
     width: max-content;
     will-change: transform;
     animation: clubScroll var(--club-scroll-duration, 14s) linear infinite;
-    /* + rapide */
 }
 
 @keyframes clubScroll {
@@ -354,7 +307,7 @@ button {
     box-shadow: 0 14px 32px rgba(0, 0, 0, 0.10);
 }
 
-/* Logo dans un "badge" */
+/* Logo */
 .club-card img {
     width: 68px !important;
     height: 68px !important;
@@ -366,7 +319,7 @@ button {
     margin: 0 auto;
 }
 
-/* Titre */
+/* Texte carte */
 .club-card h4 {
     margin: 0;
     font-size: 1.8rem;
@@ -375,7 +328,6 @@ button {
     color: #111;
 }
 
-/* Auteur(s) */
 .club-card p {
     margin: 0;
     font-size: 1.2rem;
@@ -383,23 +335,18 @@ button {
     color: rgba(0, 0, 0, 0.62);
 }
 
-/* Responsive : force 3 visibles sur tablette */
+/* Responsive : tablette */
 @media (max-width: 1024px) {
     .club-card {
         flex-basis: clamp(200px, 32vw, 260px);
     }
 }
 
-/* Mobile */
+/* Responsive : mobile */
 @media (max-width: 768px) {
     .club-card {
         flex-basis: clamp(220px, 70vw, 320px);
     }
-}
-
-.club-carousel-wrapper {
-    position: relative;
-    /* nécessaire pour les overlays */
 }
 
 /* Fondu gauche/droite */
@@ -410,7 +357,6 @@ button {
     top: 0;
     height: 100%;
     width: 90px;
-    /* largeur du fondu */
     pointer-events: none;
     /* ne bloque pas le hover */
     z-index: 5;
@@ -430,58 +376,34 @@ button {
             rgba(245, 245, 245, 0) 100%);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* CITATION */
+/* =======================
+   CITATION
+   ======================= */
 #Citation {
     margin: 0px 5vw 5vw 5vw;
     height: 60vh;
     display: flex;
     align-items: center;
-    /* centre verticalement */
     justify-content: flex-start;
-    /* aligne à gauche */
     font-family: 'Montserrat', sans-serif;
 }
 
 #Citation p {
     font-weight: 400;
     font-size: clamp(1.5rem, 3vw, 3rem);
-    /* taille flexible */
     margin: 0;
     color: #686868;
-
     transition: transform 0.8s ease;
-    /* animation smooth */
     transform-origin: left;
-    /* agrandit depuis le bord gauche */
 }
 
 #Citation p:hover {
     transform: scale(1.05);
-    /* grossit légèrement */
 }
 
-
-/* Ajustement supplémentaire pour écrans très petits */
 @media (max-width: 480px) {
     #Citation {
         height: auto;
-        /* la section s'adapte à la hauteur du texte */
         margin-left: 3vw;
         margin-right: 3vw;
         padding-top: 2rem;
@@ -490,19 +412,12 @@ button {
 
     #Citation p {
         font-size: 1.8rem;
-        /* taille confortable sur mobile */
     }
 }
 
-
-
-
-
-
-
-
-
-/* FORMULAIRE */
+/* =======================
+   FORMULAIRE
+   ======================= */
 #Formulaire {
     background: #ffffff;
     padding: 5vw;
@@ -519,7 +434,6 @@ button {
     width: 70vw;
     max-width: 900px;
     margin: 0 auto;
-
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -540,13 +454,12 @@ button {
     box-shadow: 0 0 0 3px rgba(31, 122, 77, 0.2);
 }
 
-/* CHECKBOX + LABEL SUR LA MEME LIGNE */
+/* Checkbox */
 .checkbox-group {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     justify-content: flex-start;
-    /* à gauche */
 }
 
 .checkbox-group input[type="checkbox"] {
@@ -557,7 +470,7 @@ button {
     font-size: 1rem;
 }
 
-/* BOUTON SUBMIT */
+/* Bouton */
 #Formulaire button {
     margin-top: 1rem;
     padding: 1.2rem;
@@ -568,11 +481,7 @@ button {
     color: black;
     border: none;
     cursor: pointer;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background-color 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 #Formulaire button:hover {
@@ -582,27 +491,6 @@ button {
     color: #F5F5F5;
 }
 
-
-/* FOOTER */
-footer {
-    background-color: #1F7A4D;
-    color: #F5F5F5;
-    margin: 0;
-    height: 200px;
-    padding: 50px 5vw 50px 5vw;
-
-    display: flex; /*Alignement-creditsImage-footer*/
-    justify-content: space-between;/*Alignement-creditsImage-footer*/
-    align-items: flex-start; /*Alignement-creditsImage-footer*/
-}
-
-footer #source {
-    margin-left: auto;
-    /* pousse le texte à droite */
-    text-align: right;
-}
-
-/* RESPONSIVE */
 @media (max-width: 768px) {
     #Formulaire form {
         width: 90vw;
@@ -614,119 +502,98 @@ footer #source {
     }
 }
 
-
-
-
-
-/* ===== Progress bar (téléchargement PDF) ===== */
-#messageContainer{
-  margin-top: 18px;
-  width: 100%;
+/* =======================
+   FOOTER
+   ======================= */
+footer {
+    background-color: #1F7A4D;
+    color: #F5F5F5;
+    margin: 0;
+    height: 200px;
+    padding: 50px 5vw 50px 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-/* Si la barre est un <progress> */
-#messageContainer progress{
-  width: 100%;
-  height: 14px;
-  appearance: none;
-  -webkit-appearance: none;
-  border: none;
-  border-radius: 999px;
-  overflow: hidden;
-  background-color: #e5e5e5;
+footer #source {
+    margin-left: auto;
+    text-align: right;
 }
 
-/* Background (Chrome / Safari) */
-#messageContainer progress::-webkit-progress-bar{
-  background-color: #e5e5e5;
-  border-radius: 999px;
+/* =======================
+   Progress bar (PDF)
+   ======================= */
+#messageContainer {
+    margin-top: 18px;
+    width: 100%;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1F7A4D;
 }
 
-/* Barre qui progresse */
-#messageContainer progress::-webkit-progress-value{
-  background: linear-gradient(90deg, #1F7A4D, #27ae60);
-  border-radius: 999px;
-  transition: width 0.3s ease;
+#messageContainer progress {
+    width: 100%;
+    height: 14px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 999px;
+    overflow: hidden;
+    background-color: #e5e5e5;
 }
 
-/* Firefox */
-#messageContainer progress::-moz-progress-bar{
-  background: linear-gradient(90deg, #1F7A4D, #27ae60);
-  border-radius: 999px;
+#messageContainer progress::-webkit-progress-bar {
+    background-color: #e5e5e5;
+    border-radius: 999px;
 }
 
-/* Texte de statut (si le JS affiche du texte) */
-#messageContainer{
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #1F7A4D;
+#messageContainer progress::-webkit-progress-value {
+    background: linear-gradient(90deg, #1F7A4D, #27ae60);
+    border-radius: 999px;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(31, 122, 77, 0.4);
 }
 
-/* Petit effet "glow" quand ça progresse */
-#messageContainer progress::-webkit-progress-value{
-  box-shadow: 0 0 10px rgba(31,122,77,0.4);
+#messageContainer progress::-moz-progress-bar {
+    background: linear-gradient(90deg, #1F7A4D, #27ae60);
+    border-radius: 999px;
 }
 
-
-
-
-
-
-
-
-/* BACKTOTOP */
+/* =======================
+   BACK TO TOP
+   ======================= */
 #backToTop {
     position: fixed;
-    /* reste collé à l'écran */
     bottom: 30px;
-    /* 30px du bas */
     right: 30px;
-    /* 30px de la droite */
     z-index: 1000;
-    /* devant tout */
     width: 50px;
-    /* largeur fixe */
     height: 50px;
-    /* hauteur égale à largeur */
     background-color: #1F7A4D;
     color: white;
     border: none;
     border-radius: 50%;
-    /* rond parfait */
     font-size: 1.5rem;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     opacity: 0;
-    /* invisible par défaut */
     display: flex;
-    /* pour centrer le texte */
     align-items: center;
-    /* centre verticalement */
     justify-content: center;
-    /* centre horizontalement */
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* (doublon supprimé : hover était écrit 2x) */
 #backToTop:hover {
     background-color: #F2C94C;
     color: #1F7A4D;
     transform: translateY(-3px);
 }
 
-
-#backToTop:hover {
-    background-color: #F2C94C;
-    color: #1F7A4D;
-    transform: translateY(-3px);
-}
-
-
-
-
-
-
-
-/*LINES BACKGROUND*/
+/* =======================
+   LINES BACKGROUND
+   ======================= */
 #LinesBackground {
     background-color: #f5f5f5;
     background-image: url("../medias/Closed-Lines.svg");
@@ -736,19 +603,15 @@ footer #source {
     min-height: 100vh;
 }
 
-/* Contenu dans la section */
 #LinesBackground .content {
     color: black;
 }
 
-
-
-/* ========================= */
-/* 📱 MOBILE – 360 / 375 px */
-/* ========================= */
+/* =========================
+   MOBILE – 360 / 375 px
+   ========================= */
 @media (max-width: 390px) {
 
-    /* ---------- GLOBAL ---------- */
     body {
         font-size: 14px;
     }
@@ -759,7 +622,7 @@ footer #source {
         height: auto;
     }
 
-    /* ---------- BIG PICTURE ---------- */
+    /* BIG PICTURE */
     #BigPicture {
         height: 45vh;
         padding-left: 4vw;
@@ -778,7 +641,7 @@ footer #source {
         transform: none;
     }
 
-    /* ---------- HERO ---------- */
+    /* HERO */
     #Hero {
         margin: 8vw 5vw;
         padding: 0;
@@ -803,15 +666,16 @@ footer #source {
     }
 
     #Hero li {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
-    color: #686868;
-    margin-bottom: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.1rem;
+        color: #686868;
+        margin-bottom: 10px;
     }
 
-    /* ---------- STATS ---------- */
+    /* STATS */
     #Stats {
-        margin-top: 6rem; /* remplace les 70vh */
+        margin-top: 6rem;
+        /* remplace les 70vh */
         margin-left: 5vw;
         margin-right: 5vw;
     }
@@ -836,7 +700,7 @@ footer #source {
         font-size: 1.2rem;
     }
 
-    /* ---------- CLUBS ---------- */
+    /* CLUBS */
     #Clubs h2 {
         font-size: 2.4rem;
         width: 100%;
@@ -851,7 +715,7 @@ footer #source {
         padding: 10px;
     }
 
-    /* ---------- CITATION ---------- */
+    /* CITATION */
     #Citation {
         height: auto;
         margin: 10vw 5vw;
@@ -861,7 +725,7 @@ footer #source {
         font-size: 1.6rem;
     }
 
-    /* ---------- FORMULAIRE ---------- */
+    /* FORMULAIRE */
     #Formulaire {
         padding: 10vw 5vw;
     }
@@ -881,7 +745,7 @@ footer #source {
         font-size: 1rem;
     }
 
-    /* ---------- FOOTER ---------- */
+    /* FOOTER */
     footer {
         flex-direction: column;
         height: auto;
@@ -894,12 +758,148 @@ footer #source {
         text-align: left;
     }
 
-    /* ---------- BACK TO TOP ---------- */
+    /* BACK TO TOP */
     #backToTop {
         width: 44px;
         height: 44px;
         bottom: 20px;
         right: 20px;
         font-size: 1.2rem;
+    }
+}
+
+/* =========================================
+   RESPONSIVE CORRECTIF – ÉCRANS INTERMÉDIAIRES
+   (NE MODIFIE PAS desktop plein / mobile)
+   ========================================= */
+
+/* Laptop / desktop réduit */
+@media (max-width: 1200px) {
+
+    /* BIG PICTURE */
+    #BigPicture h1 {
+        font-size: 4.5rem;
+        max-width: 90%;
+    }
+
+    /* HERO */
+    #Hero {
+        height: auto;
+        margin: 5vw;
+        padding: 3rem 0;
+    }
+
+    #Hero h1 {
+        font-size: 3.2rem;
+        max-width: 90%;
+    }
+
+    #Hero p {
+        max-width: 80%;
+    }
+
+    /* Bouton reste centré */
+    #Hero a {
+        margin-top: 4rem;
+    }
+
+    /* La liste prend la même taille que le paragraphe */
+    #Hero li {
+        font-size: 1.4rem;
+        line-height: 1.45;
+    }
+
+    /* STATS */
+    #Stats {
+        margin-top: 8rem;
+        /* remplace le 70vh destructeur */
+    }
+
+    #Stats h2 {
+        font-size: 3.2rem;
+        width: 90%;
+    }
+
+    #Stats div[id^="Card"] {
+        width: 80%;
+    }
+
+    .StatNumber {
+        font-size: 6rem;
+    }
+
+    .StatText {
+        font-size: 1.8rem;
+    }
+
+    /* CLUBS */
+    #Clubs h2 {
+        font-size: 3.2rem;
+        width: 90%;
+    }
+
+    /* CITATION */
+    #Citation {
+        height: auto;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+/* Tablette paysage / petite fenêtre */
+@media (max-width: 900px) {
+
+    /* BIG PICTURE */
+    #BigPicture h1 {
+        font-size: 3.2rem;
+        max-width: 100%;
+    }
+
+    /* HERO */
+    #Hero h1 {
+        font-size: 2.6rem;
+        max-width: 100%;
+    }
+
+    #Hero p {
+        max-width: 100%;
+    }
+
+    #Hero a {
+        margin-top: 3rem;
+    }
+
+    #Hero li {
+        font-size: 1.1rem;
+        line-height: 1.45;
+    }
+
+    /* STATS */
+    #Stats {
+        margin-top: 6rem;
+    }
+
+    #Stats div[id^="Card"] {
+        width: 100%;
+    }
+
+    .StatNumber {
+        font-size: 4.5rem;
+    }
+
+    .StatText {
+        font-size: 1.5rem;
+    }
+
+    /* CLUBS */
+    #Clubs h2 {
+        font-size: 2.6rem;
+        width: 100%;
+    }
+
+    /* FORMULAIRE */
+    #Formulaire form {
+        width: 85%;
+        margin: 0 auto;
     }
 }
