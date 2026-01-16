@@ -280,7 +280,7 @@ button {
 
 /* CLUBS */
 #Clubs {
-    margin: 5vw;
+    margin: 5vw 5vw 0px 5vw;
     position: relative;
 }
 
@@ -437,8 +437,7 @@ button {
 
 /* CITATION */
 #Citation {
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin: 0px 5vw 5vw 5vw;
     height: 60vh;
     display: flex;
     align-items: center;
