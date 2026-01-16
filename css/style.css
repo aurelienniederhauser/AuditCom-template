@@ -729,3 +729,159 @@ footer #source {
 #LinesBackground .content {
     color: black;
 }
+
+
+
+/* ========================= */
+/* 📱 MOBILE – 360 / 375 px */
+/* ========================= */
+@media (max-width: 390px) {
+
+    /* ---------- GLOBAL ---------- */
+    body {
+        font-size: 14px;
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* ---------- BIG PICTURE ---------- */
+    #BigPicture {
+        height: 45vh;
+        padding-left: 4vw;
+        padding-bottom: 20px;
+        align-items: flex-end;
+    }
+
+    #BigPicture h1 {
+        font-size: 2.4rem;
+        max-width: 100%;
+        line-height: 1.1;
+    }
+
+    /* Désactive le zoom hover (inutile sur mobile) */
+    #BigPicture:hover img {
+        transform: none;
+    }
+
+    /* ---------- HERO ---------- */
+    #Hero {
+        margin: 8vw 5vw;
+        padding: 0;
+        height: auto;
+    }
+
+    #Hero h1 {
+        font-size: 2.2rem;
+        max-width: 100%;
+    }
+
+    #Hero p {
+        font-size: 1.1rem;
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    #Hero a {
+        margin-top: 3rem;
+        padding: 1rem 2.2rem;
+        font-size: 1.1rem;
+    }
+
+    /* ---------- STATS ---------- */
+    #Stats {
+        margin-top: 6rem; /* remplace les 70vh */
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    #Stats h2 {
+        font-size: 2.4rem;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    #Stats div[id^="Card"] {
+        width: 100%;
+        padding: 1.5rem;
+        transform: none;
+    }
+
+    .StatNumber {
+        font-size: 3rem;
+    }
+
+    .StatText {
+        font-size: 1.2rem;
+    }
+
+    /* ---------- CLUBS ---------- */
+    #Clubs h2 {
+        font-size: 2.4rem;
+        width: 100%;
+    }
+
+    .club-carousel-wrapper {
+        padding: 30px 0;
+    }
+
+    .club-card {
+        flex-basis: 80vw;
+        padding: 14px;
+    }
+
+    /* ---------- CITATION ---------- */
+    #Citation {
+        height: auto;
+        margin: 10vw 5vw;
+    }
+
+    #Citation p {
+        font-size: 1.6rem;
+    }
+
+    /* ---------- FORMULAIRE ---------- */
+    #Formulaire {
+        padding: 10vw 5vw;
+    }
+
+    #Formulaire h2 {
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+    }
+
+    #Formulaire form {
+        width: 100%;
+        padding: 0;
+    }
+
+    #Formulaire input,
+    #Formulaire button {
+        font-size: 1rem;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+        padding: 2rem 5vw;
+    }
+
+    footer #source {
+        margin-left: 0;
+        text-align: left;
+    }
+
+    /* ---------- BACK TO TOP ---------- */
+    #backToTop {
+        width: 44px;
+        height: 44px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1.2rem;
+    }
+}
