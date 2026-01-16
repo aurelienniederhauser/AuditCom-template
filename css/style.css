@@ -565,9 +565,12 @@ footer {
     background-color: #1F7A4D;
     color: #F5F5F5;
     margin: 0;
-    width: 100vw;
     height: 200px;
     padding: 50px 5vw 50px 5vw;
+
+    display: flex; /*Alignement-creditsImage-footer*/
+    justify-content: space-between;/*Alignement-creditsImage-footer*/
+    align-items: flex-start; /*Alignement-creditsImage-footer*/
 }
 
 footer #source {
